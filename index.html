@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Scaling Down Text Encoders of Text-to-Image Diffusion Models.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Scaling Down Text Encoders of Text-to-Image Diffusion Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -91,29 +91,20 @@
           <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="">Lifu Wang</a><sup>1, 2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="">Daqing Liu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="">Xinchen Liu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="">Xiaodong He</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Jingdong Explore Academy,</span>
+            <span class="author-block"><sup>2</sup>Georgia Institute of Technology</span>
           </div>
 
           <div class="column has-text-centered">
@@ -258,31 +249,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Text encoders in diffusion models have rapidly evolved, transitioning from CLIP to T5-XXL. 
+            Although this evolution has significantly enhanced the models' ability to understand complex 
+            prompts and generate text, it also leads to a substantial increase in the number of parameters. 
+            Despite T5 series encoders being trained on the C4 natural language corpus, which includes a 
+            significant amount of non-visual data, diffusion models with T5 encoder do not respond to those 
+            non-visual prompts, indicating redundancy in representational power. Therefore, it raises an 
+            important question: "Do we really need such a large text encoder?" In pursuit of an answer, 
+            we employ vision-based knowledge distillation to train a series of T5 encoder models.
+            To fully inherit T5-XXL's capabilities, we constructed our dataset based on three criteria: 
+            image quality, semantic understanding, and text-rendering. Our results demonstrate the scaling 
+            down pattern that the distilled T5-base model can generate images of comparable quality to those 
+            produced by T5-XXL, while being 50 times smaller in size. This reduction in model size significantly 
+            lowers the GPU requirements for running state-of-the-art models such as FLUX and SD3, making 
+            high-quality text-to-image generation more accessible.
           </p>
         </div>
       </div>
