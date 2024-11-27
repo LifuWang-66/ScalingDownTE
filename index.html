@@ -275,39 +275,23 @@
 <section class="hero is-small">
   <div class="hero-body">
       <div class="container is-max-desktop">
-          <h2 class="title is-3">ControlNet</h2>
-          <h2>The distilled Text Encoder is compatible with ControlNet.
+          <h2 class="title is-3">Compatibility</h2>
+          <h2>The distilled T5-Base is compatible with ControlNet, which controls image generation with additional conditions.
+            The checkpoint can be found <a href="https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro">here</a>.
           </h2>
           <img loading="lazy" src="static/images/controlnet.png"/>
-          <!-- <img loading="lazy" src="static/images/controlnet/controlnet_iclr.svg" alt="iclr" /> -->
-      </div>
-  </div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-      <div class="container is-max-desktop">
-          <h2 class="title is-3">LoRA</h2>
-          <h2>The distilled Text Encoder is compatible with LoRA.
+          <h2>In addition, we assess its compatibility with LoRA, a method that efficiently updates the weights of the base diffusion model.
+            We use <a href="https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-Anime">prithivMLmods/Canopus-LoRA-Flux-Anime</a>.
           </h2>
           <img loading="lazy" src="static/images/lora.png"/>
-          <!-- <img loading="lazy" src="static/images/controlnet/controlnet_iclr.svg" alt="iclr" /> -->
-      </div>
-  </div>
-</section>
-
-
-<section class="hero is-small">
-  <div class="hero-body">
-      <div class="container is-max-desktop">
-          <h2 class="title is-3">ControlNet</h2>
-          <h2>The distilled Text Encoder is compatible with step-distilled model.
+          <h2>We also examine whether T5-Base is compatible with a step-distilled model. We use 
+            <a href="https://huggingface.co/black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</a>
           </h2>
           <img loading="lazy" src="static/images/schnell.png"/>
-          <!-- <img loading="lazy" src="static/images/controlnet/controlnet_iclr.svg" alt="iclr" /> -->
       </div>
   </div>
 </section>
+
 
 
 <section class="section">
