@@ -156,18 +156,17 @@
   </div>
 </section>
 
-<div class="columns is-centered has-text-centered" style="justify-content: center;">
-  <div class="column is-four-fifths" style="text-align: center;">
-    <h2 class="title is-3" style="font-size: 20px; line-height: 1.5; white-space: normal;">
-      The scaling down pattern
-    </h2>
-    <h2 style="font-size: 16px; line-height: 1.5; white-space: normal;">
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">The scaling down pattern</h2>
+    <p>
       We distilledT5-XXL into a series of smaller T5 models and evaluated their
       performance in guiding image synthesis across three key dimen-
       sions: image quality, semantic understanding, and text-rendering. We treat T5-XXL’s performance as
       baseline. Our findings indicate that while image quality and se-
       mantic understanding remain largely intact, text-rendering is more
       sensitive to reductions in model size.
+    </p>
     <img loading="lazy" src="static/images/scaling_down.png" style="max-width: 100%; height: auto; width: 500px; margin: 20px auto; display: block;"/>
   </div>
 </div>
@@ -175,12 +174,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/different_t5.png"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
       <h2 class="subtitle has-text-centered">
         Visualization of the scaling down pattern.
       </h2>
+      <img src="./static/images/different_t5.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
     </div>
   </div>
 </section>
